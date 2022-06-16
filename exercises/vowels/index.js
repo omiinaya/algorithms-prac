@@ -7,6 +7,14 @@
 //   vowels('Why do you ask?') --> 4
 //   vowels('Why?') --> 0
 
-function vowels(str) {}
+function vowels(str) {
+    let vowels = ['a', 'e', 'i', 'o', 'u']
+    let chars = str.split('')
+    let x = vowels.filter(item => chars.includes(item))
+    console.log(x.length)
+    return x.length
+}
+
+vowels("hi there!")
 
 module.exports = vowels;
