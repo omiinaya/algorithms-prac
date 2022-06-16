@@ -17,6 +17,15 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n) {
+    for (var i = 1; i <= n; i++) {
+        var x = '#'
+        var y = x.repeat(i)
+        var z = y.padEnd(n, " ")
+        console.log(z)
+    }
+}
+
+steps(10)
 
 module.exports = steps;
