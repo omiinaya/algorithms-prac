@@ -9,27 +9,13 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-    let charMap1 = {}
-    let charMap2 = {}
-
-    stringA.split('').forEach(char => {
-        charMap1[char] = charMap1[char] + 1 || 1
-    })
-
-    stringB.split('').forEach(char => {
-        charMap2[char] = charMap2[char] + 1 || 1
-    })
-
-    for (let char in charMap1) {
-        if (charMap1[char] !== charMap2[char]) {
-            return false;
-        }
-    }
-
-    return true;
+    var x = stringA.split('').sort().join('')
+    var y = stringB.split('').sort().join('')
+    if (x != y) return false
+    return true
 }
 
-anagrams('One one', 'One one c')
+anagrams('hello', 'llohe')
 //anagrams('rail safety', 'fairy tales')
 
 module.exports = anagrams;
