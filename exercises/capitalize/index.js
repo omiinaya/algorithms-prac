@@ -8,14 +8,13 @@
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
 function capitalize(str) {
-    var x = str.split(' ')
-    var y = []
-    x.forEach(word => {
+    var x = []
+    str.split(' ').forEach(word => {
         let test = word[0].toUpperCase() + word.substring(1)
-        y.push(test)
+        x.push(test)
     })
-
-    console.log(y.join(' '))
+    console.log(x.join(' '))
+    return x.join(' ')
 }
 
 capitalize('a short sentence')
