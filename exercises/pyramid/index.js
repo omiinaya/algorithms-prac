@@ -16,8 +16,8 @@
 
 function pyramid(n) {
     for (let i = 1; i <= n; i++) {
-        let x = ' '.repeat(n - i);
-        let y = '#'.repeat(i * 2 - 1)
+        let x = ' '.repeat(n - i);          //total spaces - current amount of #
+        let y = '#'.repeat(i * 2 - 1)       //amount of blocks necessary for each step
         console.log(x + y + x);
     }
 }
