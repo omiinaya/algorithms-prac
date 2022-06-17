@@ -8,6 +8,9 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {}
+function fib(num) {
+    if (num <= 1) return 1;
+    return fib(num - 1) + fib(num - 2);
+}
 
 module.exports = fib;

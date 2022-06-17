@@ -8,9 +8,12 @@
 //   palindrome("abcdefg") === false
 
 function palindrome(str) {
-    const reverse = str.split('').reverse().join('')
-    if (str != reverse) return false
+    const parsed = str.replace(/[^a-z0-9]/gi, '').toLowerCase()
+    const reverse = parsed.split('').reverse().join('')
+    if (parsed != reverse) return false
     return true
 }
+
+console.log(palindrome("0P"))
 
 module.exports = palindrome;

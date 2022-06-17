@@ -11,17 +11,17 @@ function maxChar(str) {
     let maxChar = ''
 
     str.split('').forEach(char => {
-        if (!charMap[char]) charMap[char] = 1;
-        else charMap[char]++
+        charMap[char] = charMap[char] + 1 || 1;
     })
 
     for (let char in charMap) {
         if (charMap[char] > max) {
-            max = charMap[char]
-            maxChar = char
+            max = charMap[char] //increment max when new max found
+            maxChar = char //update maxChar when new one found
         }
     }
 
+    console.log(maxChar)
     return maxChar
 }
 
