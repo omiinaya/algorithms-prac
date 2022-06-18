@@ -171,3 +171,12 @@ function testClass() {
 }
 
 testClass();
+
+function palindrome(str) {
+  let par = str.toLowerCase();
+  let rev = par.split("").reverse().join("");
+  if (rev != par) return false;
+  return true;
+}
+
+console.log(palindrome("Bob"));
