@@ -108,3 +108,35 @@ function duplicateArr(array) {
 }
 
 duplicateArr([1, 2, 3, 4]);
+
+function mul(x) {
+  return function (y) {
+    return function (z) {
+      return x * y * z;
+    };
+  };
+}
+
+console.log(mul(2)(3)(4));
+
+function vowels(str) {
+  let vowels = ["a", "e", "i", "o", "u"];
+  let letters = str.split("");
+
+  let result = 0;
+  letters.forEach((letter) => {
+    if (vowels.includes(letter)) {
+      result++;
+    }
+  });
+
+  let x = vowels.filter((item) => letters.includes(item));
+  //number of total vowels
+  console.log(result);
+  //vowels found
+  console.log(x);
+  //number of vowels used (non-repeating)
+  console.log(x.length);
+}
+
+vowels("a test sentence");
