@@ -26,7 +26,7 @@ function reverseInt(num) {
 }
 
 console.log(reverseInt(-31));
-
+/*
 function chunk(array, size) {
   let chunks = [];
   for (var i = 0; i < array.length; i = i + size) {
@@ -37,3 +37,38 @@ function chunk(array, size) {
 }
 
 chunk([1, 2, 3, 4, 5], 2);
+*/
+function steps(n) {
+  for (var i = 1; i <= n; i++) {
+    let x = "#";
+    let y = x.repeat(i);
+    //let z = y.padEnd(n, " ");
+    console.log(y);
+  }
+}
+
+steps(12);
+
+function chunks(array, size) {
+  let chunks = [];
+  for (var i = 0; i < array.length; i = i + size) {
+    let chunk = [...array].splice(i, size);
+    chunks.push(chunk);
+  }
+  return chunks;
+}
+
+console.log(chunks([1, 2, 3, 4, 5], 2));
+
+function fizzBuzz(n) {
+  for (var i = 1; i <= n; i++) {
+    const fizz = i % 3 === 0;
+    const buzz = i % 5 === 0;
+    if (fizz && buzz) console.log("fizzBuzz");
+    else if (fizz) console.log("fizz");
+    else if (buzz) console.log("buzz");
+    else console.log(i);
+  }
+}
+
+fizzBuzz(10);
