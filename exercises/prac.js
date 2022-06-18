@@ -1,3 +1,5 @@
+const axios = require("axios");
+
 function anagrams(stringA, stringB) {
   let x = stringA.toLowerCase().split("").sort().join("");
   let y = stringB.toLowerCase().split("").sort().join("");
@@ -180,3 +182,24 @@ function palindrome(str) {
 }
 
 console.log(palindrome("Bob"));
+
+function pyramid(n) {
+  for (var i = 1; i <= n; i++) {
+    let space = " ".repeat(n - i);
+    let block = "#".repeat(i * 2 - 1); //i * 2 - 1 = formula to find next number
+    let result = space + block + space;
+    console.log(result);
+  }
+}
+
+pyramid(10);
+
+async function testfetch() {
+  var x = await axios.get(
+    "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"
+  );
+
+  console.log(x.data);
+}
+
+testfetch();
