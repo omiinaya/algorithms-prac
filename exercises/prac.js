@@ -48,7 +48,7 @@ function steps(n) {
 }
 
 steps(12);
-
+/*
 function chunks(array, size) {
   let chunks = [];
   for (var i = 0; i < array.length; i = i + size) {
@@ -57,7 +57,7 @@ function chunks(array, size) {
   }
   return chunks;
 }
-
+*/
 console.log(chunks([1, 2, 3, 4, 5], 2));
 
 function fizzBuzz(n) {
@@ -72,3 +72,18 @@ function fizzBuzz(n) {
 }
 
 fizzBuzz(10);
+
+function reverse(str) {
+  return str.split("").reverse().join("");
+}
+
+function chunks(array, size) {
+  let chunks = [];
+  for (var i = 0; i < array.length; i = i + size) {
+    let chunk = [...array].splice(i, size);
+    chunks.push(chunk);
+  }
+  console.log(chunks);
+}
+
+chunks([1, 2, 3, 4, 5], 2);
