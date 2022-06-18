@@ -101,3 +101,10 @@ function checkIfInteger(input) {
 
 checkIfInteger("lol");
 checkIfInteger(1);
+
+function duplicateArr(array) {
+  console.log([...array, ...array]);
+  //console.log(array.concat(array));
+}
+
+duplicateArr([1, 2, 3, 4]);
