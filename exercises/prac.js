@@ -135,8 +135,39 @@ function vowels(str) {
   console.log(result);
   //vowels found
   console.log(x);
-  //number of vowels used (non-repeating)
+  //different vowels used
   console.log(x.length);
 }
 
 vowels("a test sentence");
+
+class Duck {
+  constructor(height, width) {
+    height = this.height;
+    width = this.width;
+  }
+
+  height = 0;
+
+  getHeight() {
+    return this.height;
+  }
+
+  setHeight(a) {
+    this.height = a;
+  }
+
+  Quack() {
+    console.log("testing");
+  }
+}
+
+function testClass() {
+  let x = new Duck();
+  x.Quack();
+  console.log(x.getHeight());
+  x.setHeight(10);
+  console.log(x.getHeight());
+}
+
+testClass();
