@@ -87,3 +87,17 @@ function chunks(array, size) {
 }
 
 chunks([1, 2, 3, 4, 5], 2);
+
+function checkIfArray(input) {
+  console.log(Array.isArray(input));
+}
+
+checkIfArray([1, 2, 3, 4]);
+checkIfArray("lol");
+
+function checkIfInteger(input) {
+  console.log(Number.isInteger(input));
+}
+
+checkIfInteger("lol");
+checkIfInteger(1);
