@@ -9,13 +9,13 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-    var x = stringA.split('').sort().join('')
-    var y = stringB.split('').sort().join('')
-    if (x != y) return false
-    return true
+  var x = stringA.split("").sort().join("");
+  var y = stringB.split("").sort().join("");
+  if (x != y) return false;
+  return true;
 }
 
-anagrams('hello', 'llohe')
+console.log(anagrams("Hello", "llohe"));
 //anagrams('rail safety', 'fairy tales')
 
 module.exports = anagrams;
